@@ -6,10 +6,6 @@
 
   body {
     background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
 
   #authTitle {
@@ -17,47 +13,68 @@
     justify-content: center;
     margin-top: 20px;
   }
-
 }
 
-.phoneInput {
-  margin-top: 10px;
+.container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    background-color: #eeebfe;
+    color: #535063;
+    font-size: 12px;
+    width: 100px;
+    height: 30px;
+    margin-left: 50px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #d7d4e6;
+  }
+
+  li {
+    margin: 10px;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.noPage {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 1px solid red;
+  font-size: xx-large;
 }
 
 .randomUser {
-  padding-top: 50px;
-  color: #a2a2a2;
-}
-
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 999;
-}
-
-.modal-container {
-  background-color: white;
-  width: 350px;
-  height: 200px;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-  display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
-
-  h2 {
-    color: red;
-    padding-bottom: 10px;
-  }
-
+  color: #a2a2a2;
+  margin-top: 30px;
 }
 
 .customBtn {
@@ -80,10 +97,7 @@
   color: white;
   background-color: black;
   position: sticky;
-  top: 0;
   padding: 10px;
-  margin-bottom: 70px;
-
 
   div {
     display: flex;
@@ -108,88 +122,17 @@
   }
 }
 
-.list-container {
-
-  img {
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    margin-left: 38px;
-  }
-
-  table {
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-    border-collapse: collapse;
-    table-layout: fixed;
-    width: 80%;
-    margin: 0 auto;
-
-  }
-
-  table tr {
-    border-bottom: 1px solid rgba(0, 0, 0, .15);
-    padding: .35em;
-  }
-
-
-  table th {
-    text-align: left;
-    padding: .625em;
-  }
-
-  table td {
-    padding: .225em;
-    text-align: left;
-  }
-
-  table th {
-    background: white;
-    color: #999;
-    font-size: .85em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-
-  table td {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .image-col {
-    width: 10%;
-  }
-
-  .btn-col {
-    text-align: right;
-
-    p {
-      margin-right: 40px;
-    }
-
-    button {
-      color: blue;
-      background-color: transparent;
-      border: none;
-      border-radius: 10px;
-      margin-right: 15px;
-      font-size: medium;
-    }
-
-    button:hover {
-      text-decoration: underline;
-      color: red;
-    }
-  }
-
+.listContainer {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .containerLogin {
   background-color: white;
   border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -213,13 +156,13 @@
   }
 
   span {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 5px;
   }
 
   a {
     color: blue;
-    font-size: 13px;
+    font-size: 14px;
     text-decoration: none;
     margin-top: 20px;
   }
@@ -277,7 +220,7 @@
 .containerSignUp {
   background-color: white;
   border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -285,75 +228,80 @@
   overflow: hidden;
   min-width: 400px;
   min-height: 450px;
-  overflow: hidden;
-  min-width: 400px;
-  min-height: 450px;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  p {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: .3px;
-    margin-top: 20px;
-  }
+.containerSignUp p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .3px;
+  margin-top: 20px;
+  text-align: center;
+}
 
-  span {
-    font-size: 12px;
-    margin-bottom: 5px;
-  }
+.containerSignUp span {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+}
 
-  a {
-    color: blue;
-    font-size: 13px;
-    text-decoration: none;
-    margin-top: 20px;
-  }
+.containerSignUp a {
+  color: blue;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 5px;
+}
 
-  a:hover {
-    text-decoration: underline;
-  }
+.containerSignUp a:hover {
+  text-decoration: underline;
+}
 
-  button {
-    background-color: #512da8;
-    color: white;
-    font-size: 12px;
-    padding: 10px 35px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    text-transform: uppercase;
-    margin-top: 17px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+.containerSignUp button {
+  background-color: #512da8;
+  color: white;
+  font-size: 14px;
+  padding: 10px 35px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  button:hover {
-    background-color: #3b1f77;
-  }
+.containerSignUp button:hover {
+  background-color: #3b1f77;
+}
 
-  form {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 25px;
-  }
+.containerSignUp form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 25px;
+}
 
-  input {
-    background-color: #eee;
-    border: none;
-    margin: 8px 0;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 8px;
-    width: 65%;
-    outline: none;
-  }
+.containerSignUp input {
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  width: calc(100% - 30px);
+  outline: none;
+}
 
-  .forgotP:hover {
-    text-decoration: underline;
-    color: #5c6bc0;
-  }
-
+.containerSignUp .forgotP:hover {
+  text-decoration: underline;
+  color: #5c6bc0;
+  cursor: pointer;
+  text-align: center;
 }

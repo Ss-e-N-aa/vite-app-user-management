@@ -3,6 +3,7 @@ const { Schema } = mongoose
 
 const userSchema = new Schema({
     id: Number,
+    role: String,
     firstName: String,
     lastName: String,
     username: String,
@@ -11,7 +12,6 @@ const userSchema = new Schema({
         unique: true
     },
     password: String,
-    image: String
 })
 
 const UserModel = mongoose.model('User', userSchema)

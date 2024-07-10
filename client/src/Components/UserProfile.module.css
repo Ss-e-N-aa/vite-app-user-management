@@ -1,0 +1,75 @@
+.containerUser {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    min-width: 400px;
+    min-height: 450px;
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .fullNameControl {
+        display: flex;
+        gap: 12px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    ul {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    li {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: .3px;
+        margin-top: 20px;
+    }
+
+    a {
+        color: blue;
+        font-size: 14px;
+        text-decoration: none;
+        margin-top: 20px;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    button {
+        margin-top: 40px;
+        background-color: #3881ff;
+        color: white;
+        font-size: 15px;
+        width: 100px;
+        height: 30px;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #306dd6;
+    }
+
+}
